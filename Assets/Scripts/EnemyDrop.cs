@@ -7,7 +7,7 @@ public class EnemyDrop : MonoBehaviour {
 
     public static void GetLucky(Vector3 position)
     {
-        bool shouldIDropSomeShit = Random.value >= 0f;
+        bool shouldIDropSomeShit = Random.value >= 0.5f;
 
         if (shouldIDropSomeShit)
         {

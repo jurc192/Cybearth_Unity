@@ -31,7 +31,6 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-
     void Death ()
     {
         EnemyDrop.GetLucky(transform.position);

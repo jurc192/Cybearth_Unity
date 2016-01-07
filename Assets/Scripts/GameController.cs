@@ -23,6 +23,8 @@ public class GameController : MonoBehaviour {
         {
             text.GetComponent<Text>().text = "Game Over";
             text.SetActive(true);
+
+            Time.timeScale = 0;
         }
     }
 }
