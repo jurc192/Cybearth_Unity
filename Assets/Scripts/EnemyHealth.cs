@@ -6,12 +6,14 @@ public class EnemyHealth : MonoBehaviour
     public int currentHealth;
 
     ParticleSystem hitParticles;
+    Transform lookAtTarget;
 
     void Awake ()
     {
         hitParticles = GetComponentInChildren <ParticleSystem> ();
 
         currentHealth = startingHealth;
+        lookAtTarget = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     public void TakeDamage (int amount, Vector3 hitPoint)
@@ -19,6 +21,7 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= amount;
             
         hitParticles.transform.position = hitPoint;
+        hitParticles.transform.LookAt(lookAtTarget);
 
         hitParticles.Play();
 

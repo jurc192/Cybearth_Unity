@@ -45,8 +45,8 @@ public class PlayerShooting : MonoBehaviour
         timer += Time.deltaTime;
 
 
-        if ((Input.GetButton("Fire1") && weapon.IsAutomatic && timer >= weapon.TimeBetweenBullets && Time.timeScale != 0) ||
-            (Input.GetButtonDown("Fire1") && !weapon.IsAutomatic))
+        if (((Input.GetButton("Fire1") && weapon.IsAutomatic) || (Input.GetButtonDown("Fire1") && !weapon.IsAutomatic))
+                && timer >= weapon.TimeBetweenBullets && Time.timeScale != 0)
         {
             if (weapon.CanShoot) Shoot();
             else if(!weapon.IsReloading)
