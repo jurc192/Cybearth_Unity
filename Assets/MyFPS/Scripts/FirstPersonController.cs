@@ -39,6 +39,8 @@ public class FirstPersonController : MonoBehaviour
     private bool m_Jumping;
     private AudioSource m_AudioSource;
 
+    public bool UseHeadBob { get { return m_UseHeadBob;  } set { m_UseHeadBob = value;  } }
+
     // Use this for initialization
     private void Start()
     {

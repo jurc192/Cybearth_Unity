@@ -55,7 +55,7 @@ public class TriggerBoxHandler : MonoBehaviour {
         if (other.tag.Equals("Player"))
         {
             infoText.SetActive(true);
-            text.text = "TRIGGER\nHOLD < E >";
+            text.text = "HOLD < E >\nTO HACK";
             
             isTriggerOn = true;
         }
