@@ -41,9 +41,14 @@ public class FirstPersonController : MonoBehaviour
 
     public bool UseHeadBob { get { return m_UseHeadBob;  } set { m_UseHeadBob = value;  } }
 
+    private float fallHeight;
+    private PlayerHealth health;
+
     // Use this for initialization
     private void Start()
     {
+        health = GetComponent<PlayerHealth>();
+
         m_CharacterController = GetComponent<CharacterController>();
         m_Camera = Camera.main;
         m_OriginalCameraPosition = m_Camera.transform.localPosition;
@@ -67,8 +72,14 @@ public class FirstPersonController : MonoBehaviour
             m_Jump = Input.GetButtonDown("Jump");
         }
 
+        //pristanek
         if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
         {
+            if(m_MoveDir.y < -20)
+            {
+                health.TakeDamage(90);
+            }
+
             StartCoroutine(m_JumpBob.DoBobCycle());
             PlayLandingSound();
             m_MoveDir.y = 0f;
