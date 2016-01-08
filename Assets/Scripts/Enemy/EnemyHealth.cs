@@ -2,8 +2,8 @@
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int startingHealth = 100;
-    public int currentHealth;
+    [SerializeField] private int startingHealth = 100;
+    private int currentHealth;
 
     ParticleSystem hitParticles;
     Transform lookAtTarget;

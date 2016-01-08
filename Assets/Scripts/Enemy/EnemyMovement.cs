@@ -1,35 +1,79 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace CompleteProject
+public class EnemyMovement : MonoBehaviour
 {
-    public class EnemyMovement : MonoBehaviour
+    NavMeshAgent nav;               // Reference to the nav mesh agent.
+    [SerializeField] GameObject patrolPoints;
+
+    Transform[] pps;
+    int numOfPps;
+    int currentPP;
+
+    float timeToWait = 6f;
+    float timer = 0;
+
+    float viewDistance = 60;
+    int rayNum = 4;
+    int fov = 124;
+    Ray seeRay;
+    int envMask;
+    int enemyMask;
+
+    bool sawPlayer = false;
+    Transform player;
+
+
+    void Awake ()
     {
-        NavMeshAgent nav;               // Reference to the nav mesh agent.
-        [SerializeField] GameObject patrolPoints;
+        nav = GetComponent <NavMeshAgent> ();
+        pps = patrolPoints.GetComponentsInChildren<Transform>();
+        numOfPps = pps.Length;
 
-        Transform[] pps;
-        int numOfPps;
-        int currentPP = 0;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        envMask = LayerMask.GetMask("Environment");
+        enemyMask = LayerMask.GetMask("Enemies");
 
-        float timeToWait = 4f;
-        float timer = 0;
+        int currentPP = Random.Range(0, numOfPps);
+        nav.SetDestination(pps[currentPP].position);
+    }
 
-        void Awake ()
+    void FixedUpdate()
+    {
+        if (!sawPlayer)
+            doISeePlayer();
+    }
+
+    void Update ()
+    {
+
+        for (int i = 0; i < rayNum; i++)
         {
-            nav = GetComponent <NavMeshAgent> ();
-            pps = patrolPoints.GetComponentsInChildren<Transform>();
-            numOfPps = pps.Length;
-
-            nav.SetDestination(pps[currentPP].position);
+            Debug.DrawRay(transform.position, Quaternion.AngleAxis(-fov/2f + fov/(rayNum-1) * i, Vector3.up) * transform.forward * viewDistance, Color.red, 0.1f, false);
         }
-
-
-        void Update ()
+        Debug.DrawLine(transform.position, player.position);
+        if (sawPlayer)
         {
-            if(Vector3.Distance(nav.destination,nav.transform.position) <  2)
+            if (Vector3.Distance(transform.position, player.position) < 3f)
+                nav.Stop();
+            else
+            {
+                nav.Resume();
+                nav.SetDestination(player.position);
+            }
+            alertOthers();
+        }
+        //patrol
+        else
+        {
+            if (Vector3.Distance(nav.destination, nav.transform.position) < 2)
             {
                 timer += Time.deltaTime;
+
+                if (timer <= 2)
+                    transform.Rotate(0, Time.deltaTime * 45 / 2, 0);
+                else
+                    transform.Rotate(0, Time.deltaTime * -45 / 2, 0);
 
                 if (timer >= timeToWait)
                 {
@@ -39,5 +83,50 @@ namespace CompleteProject
                 }
             }
         }
+    }
+
+    void doISeePlayer()
+    {
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        // ce ni predalec
+        if (distanceToPlayer <= viewDistance)
+        {
+            Vector3 vecToPlayer = player.position - transform.position;
+            float angleToPlayer = Vector3.Angle(transform.forward, vecToPlayer);
+            // ce je znotraj kota vidnega polja
+            if (Mathf.Abs(angleToPlayer) <= fov / 2f)
+            {
+                seeRay.origin = transform.position;
+                seeRay.direction = vecToPlayer;
+
+                //ce ni vmes stena ipd.
+                if (Physics.Raycast(seeRay, distanceToPlayer, envMask))
+                    return;
+
+                alert();
+
+            }
+        }
+    }
+
+    void alertOthers()
+    {
+        Collider[] others = Physics.OverlapSphere(transform.position, 5f, enemyMask);
+        foreach(Collider c in others)
+        {
+            EnemyMovement em = c.gameObject.GetComponent<EnemyMovement>();
+            if(em != null)
+            {
+                em.alert();
+            }
+        }
+    }
+
+    public void alert()
+    {
+        sawPlayer = true;
+        nav.speed = 6;
+        GameObject head = transform.Find("Head").gameObject;
+        head.GetComponent<Renderer>().material.color = Color.green;
     }
 }

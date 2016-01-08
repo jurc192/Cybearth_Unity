@@ -10,8 +10,26 @@ GameObject:
   - 4: {fileID: 419138}
   - 199: {fileID: 19919630}
   - 198: {fileID: 19854846}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: BloodParticles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &136698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 485920}
+  - 33: {fileID: 3336136}
+  - 135: {fileID: 13582706}
+  - 23: {fileID: 2339792}
+  m_Layer: 9
+  m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +50,7 @@ GameObject:
   - 54: {fileID: 5430108}
   - 114: {fileID: 11471794}
   - 195: {fileID: 19550810}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: EnemyCapsule
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -58,12 +76,51 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143166}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 0.7358093, y: 1.500001, z: 3.6108856}
+  m_LocalPosition: {x: 0.7358093, y: 1, z: 3.6108856}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 419138}
+  - {fileID: 485920}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &485920
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.473, z: 0.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 423238}
+  m_RootOrder: 1
+--- !u!23 &2339792
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136698}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: f441800bfc6304d4fba0034e89c0c6fb, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &2376322
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -90,6 +147,13 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!33 &3336136
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136698}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3358286
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -136,6 +200,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea9a6ed18654d14db02bf0076cfe488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPoints: {fileID: 0}
+--- !u!135 &13582706
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136698}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &13691272
 CapsuleCollider:
   m_ObjectHideFlags: 1
