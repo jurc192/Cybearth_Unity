@@ -55,6 +55,11 @@ public class EnemyMovement : MonoBehaviour
         Debug.DrawLine(transform.position, player.position);
         ////////
 
+        //"hoover"
+        float y = 0.25f * Mathf.Sin(Time.realtimeSinceStartup * 5);
+        transform.Translate(new Vector3(0, y, 0));
+
+
         if (sawPlayer)
         {
             if (Vector3.Distance(transform.position, player.position) < 10f)
