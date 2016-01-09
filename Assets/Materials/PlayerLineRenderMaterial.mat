@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LineRenderMaterial
+  m_Name: PlayerLineRenderMaterial
   m_Shader: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _EMISSIONMAP _LIGHTMAPPING_DYNAMIC_LIGHTMAPS _LIGHTMAPPING_REALTIME
     _UVSEC_UV1
@@ -155,7 +155,7 @@ Material:
         second: 0
       data:
         first:
-          name: _EmissionLM
+          name: _EmissionScaleUI
         second: 1
       data:
         first:
@@ -167,7 +167,7 @@ Material:
         second: 0
       data:
         first:
-          name: _EmissionScaleUI
+          name: _EmissionLM
         second: 1
     m_Colors:
       data:
@@ -177,7 +177,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 0, b: 0, a: 1}
+        second: {r: 0, g: 0.6689658, b: 1, a: 0.49803922}
       data:
         first:
           name: _SpecColor

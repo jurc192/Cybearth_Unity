@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
     float timer = 0;
 
     float viewDistance = 60;
-    int rayNum = 4;
+    int rayNum = 2; // debug
     int fov = 124;
     Ray seeRay;
     int envMask;
@@ -23,6 +23,7 @@ public class EnemyMovement : MonoBehaviour
     bool sawPlayer = false;
     Transform player;
 
+    public bool SawPlayer { get { return sawPlayer; } }
 
     void Awake ()
     {
@@ -46,16 +47,21 @@ public class EnemyMovement : MonoBehaviour
 
     void Update ()
     {
-
+        ////////Debug
         for (int i = 0; i < rayNum; i++)
         {
-            Debug.DrawRay(transform.position, Quaternion.AngleAxis(-fov/2f + fov/(rayNum-1) * i, Vector3.up) * transform.forward * viewDistance, Color.red, 0.1f, false);
+            Debug.DrawRay(transform.position, Quaternion.AngleAxis(-fov/2f + fov/(rayNum-1) * i, Vector3.up) * transform.forward * viewDistance, Color.red, 0.1f);
         }
         Debug.DrawLine(transform.position, player.position);
+        ////////
+
         if (sawPlayer)
         {
-            if (Vector3.Distance(transform.position, player.position) < 3f)
+            if (Vector3.Distance(transform.position, player.position) < 10f)
+            {
+                transform.LookAt(player.position);
                 nav.Stop();
+            }
             else
             {
                 nav.Resume();
@@ -125,8 +131,13 @@ public class EnemyMovement : MonoBehaviour
     public void alert()
     {
         sawPlayer = true;
-        nav.speed = 6;
+        nav.speed = 8;
         GameObject head = transform.Find("Head").gameObject;
         head.GetComponent<Renderer>().material.color = Color.green;
+    }
+
+    public void SetNavDestination(Vector3 dest)
+    {
+        nav.SetDestination(dest);
     }
 }

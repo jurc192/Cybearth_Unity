@@ -7,16 +7,19 @@ public class EnemyHealth : MonoBehaviour
 
     ParticleSystem hitParticles;
     Transform lookAtTarget;
+    EnemyMovement enemyMovement;
 
     void Awake ()
     {
+        enemyMovement = gameObject.GetComponent<EnemyMovement>();
+
         hitParticles = GetComponentInChildren <ParticleSystem> ();
 
         currentHealth = startingHealth;
         lookAtTarget = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    public void TakeDamage (int amount, Vector3 hitPoint)
+    public void TakeDamage (int amount, Vector3 hitPoint, Vector3 origin)
     {
         currentHealth -= amount;
             
@@ -28,6 +31,11 @@ public class EnemyHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             Death ();
+        }
+
+        if (!enemyMovement.SawPlayer)
+        {
+            enemyMovement.SetNavDestination(origin);
         }
     }
 

@@ -17,7 +17,7 @@ public class PlayerShooting : MonoBehaviour
     LineRenderer gunLine;
     AudioSource gunAudio;
     Light gunLight;
-    float effectsDisplayTime = 0.2f;
+    float effectsDisplayTime = 0.02f;
 
     Image crosshairImage;
 
@@ -58,7 +58,7 @@ public class PlayerShooting : MonoBehaviour
         }
 
 
-        if (timer >= weapon.TimeBetweenBullets * effectsDisplayTime)
+        if (timer >= effectsDisplayTime)
         {
             DisableEffects();
         }
@@ -102,7 +102,7 @@ public class PlayerShooting : MonoBehaviour
             if (enemyHealth != null)
             {
                 //... the enemy should take damage.
-                enemyHealth.TakeDamage(weapon.DamagePerShot, shootHit.point);
+                enemyHealth.TakeDamage(weapon.DamagePerShot, shootHit.point, shootRay.origin);
             }
 
             // Set the second position of the line renderer to the point the raycast hit.
