@@ -18,6 +18,7 @@ public class TriggerBoxHandler : MonoBehaviour {
     [SerializeField] private ProgressBarController progressBar;
     [SerializeField] private GameObject progressBarGO;
     [SerializeField] private GameObject infoText;
+	[SerializeField] private ControlTerminalScript cts;
 
     private Text text;
 
@@ -78,8 +79,8 @@ public class TriggerBoxHandler : MonoBehaviour {
         infoText.SetActive(false);
         progressBarGO.SetActive(false);
 
+		cts.HackJumbo();
+		
         gameController.FinishedTask();
-
-        Destroy(gameObject);
     }
 }
