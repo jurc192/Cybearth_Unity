@@ -54,6 +54,8 @@ public class ElevatorHandler : MonoBehaviour {
         if (direction == 1)
         {
             elevator.transform.Translate(Vector3.up * speed * Time.deltaTime);
+            if (PlayerOnElevator)
+                player.Translate(Vector3.up * speed * Time.deltaTime);
         }
         else if (direction == 3)
         {

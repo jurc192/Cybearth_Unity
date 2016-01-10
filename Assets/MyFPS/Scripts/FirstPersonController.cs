@@ -77,7 +77,9 @@ public class FirstPersonController : MonoBehaviour
         {
             if(m_MoveDir.y < -20)
             {
-                health.TakeDamage(90);
+                float ammount = m_MoveDir.y*-1/10f * 12;
+                ammount = Mathf.Round(ammount);
+                health.TakeDamage(ammount);
             }
 
             StartCoroutine(m_JumpBob.DoBobCycle());
@@ -106,10 +108,8 @@ public class FirstPersonController : MonoBehaviour
     {
         float speed;
         GetInput(out speed);
-        // always move along the camera forward as it is the direction that it being aimed at
         Vector3 desiredMove = transform.forward*m_Input.y + transform.right*m_Input.x;
 
-        // get a normal for the surface that is being touched to move along it
         RaycastHit hitInfo;
         Physics.SphereCast(transform.position, m_CharacterController.radius, Vector3.down, out hitInfo,
                             m_CharacterController.height/2f, ~0, QueryTriggerInteraction.Ignore);
@@ -133,7 +133,7 @@ public class FirstPersonController : MonoBehaviour
         }
         else
         {
-            m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
+            m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.fixedDeltaTime;
         }
         m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
 
@@ -176,12 +176,9 @@ public class FirstPersonController : MonoBehaviour
         {
             return;
         }
-        // pick & play a random footstep sound from the array,
-        // excluding sound at index 0
         int n = Random.Range(1, m_FootstepSounds.Length);
         m_AudioSource.clip = m_FootstepSounds[n];
         m_AudioSource.PlayOneShot(m_AudioSource.clip);
-        // move picked sound to index 0 so it's not picked next time
         m_FootstepSounds[n] = m_FootstepSounds[0];
         m_FootstepSounds[0] = m_AudioSource.clip;
     }
@@ -213,29 +210,21 @@ public class FirstPersonController : MonoBehaviour
 
     private void GetInput(out float speed)
     {
-        // Read input
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
         bool waswalking = m_IsWalking;
 
-#if !MOBILE_INPUT
-        // On standalone builds, walk/run speed is modified by a key press.
-        // keep track of whether or not the character is walking or running
         m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
-#endif
-        // set the desired speed to be walking or running
+
         speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
         m_Input = new Vector2(horizontal, vertical);
 
-        // normalize input if it exceeds 1 in combined length:
         if (m_Input.sqrMagnitude > 1)
         {
             m_Input.Normalize();
         }
 
-        // handle speed change to give an fov kick
-        // only if the player is going to a run, is running and the fovkick is to be used
         if (m_IsWalking != waswalking && m_UseFovKick && m_CharacterController.velocity.sqrMagnitude > 0)
         {
             StopAllCoroutines();
