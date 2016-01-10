@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour {
 	void Start () {
         finishedTasks = 0;
         numOfTasks = TriggerBoxHandler.TriggerBoxCount;
-	}
+    }
 	
     public void FinishedTask()
     {

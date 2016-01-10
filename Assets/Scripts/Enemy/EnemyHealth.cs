@@ -13,7 +13,7 @@ public class EnemyHealth : MonoBehaviour
     {
         enemyMovement = gameObject.GetComponent<EnemyMovement>();
 
-        hitParticles = GetComponentInChildren <ParticleSystem> ();
+        hitParticles = transform.Find("Sparks").GetComponent<ParticleSystem>();
 
         currentHealth = startingHealth;
         lookAtTarget = GameObject.FindGameObjectWithTag("Player").transform;

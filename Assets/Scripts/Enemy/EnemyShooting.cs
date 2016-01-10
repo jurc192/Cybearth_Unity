@@ -17,7 +17,7 @@ public class EnemyShooting : MonoBehaviour {
     float effectsDisplayTime = 0.02f;
 
     float timeBetweenShots = 1.5f;
-    float damage = 22f;
+    float damage = 11f;
     float range = 40f;
     float shootAngle = 60f;
     float miss = 1f;

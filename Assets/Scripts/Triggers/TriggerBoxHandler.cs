@@ -82,5 +82,7 @@ public class TriggerBoxHandler : MonoBehaviour {
 		cts.HackJumbo();
 		
         gameController.FinishedTask();
+
+        this.enabled = false;
     }
 }

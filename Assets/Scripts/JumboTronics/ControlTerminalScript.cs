@@ -11,7 +11,7 @@ public class ControlTerminalScript : MonoBehaviour {
 	public void HackJumbo() {
 		
 		int numJumbos= jumboTronicContainer.transform.childCount;
-		Debug.Log("stJumbotov: "+numJumbos);
+		//Debug.Log("stJumbotov: "+numJumbos);
 	
         screens = jumboTronicContainer.GetComponentsInChildren<TextureHandler>();
 		

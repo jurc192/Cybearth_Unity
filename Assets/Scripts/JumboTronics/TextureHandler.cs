@@ -22,7 +22,7 @@ public class TextureHandler : MonoBehaviour {
 		numTextures = textures.Length;
 		screen = this.transform.Find("Screen").gameObject;
 		
-		Debug.Log("Num textures: "+numTextures);
+		//Debug.Log("Num textures: "+numTextures);
 		
 		//swap textures every x seconds
 		InvokeRepeating("ChangeTexture", 0.1f, textureSwapRate);

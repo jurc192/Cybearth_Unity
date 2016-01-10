@@ -45,31 +45,28 @@ public class EnemyMovement : MonoBehaviour
             doISeePlayer();
     }
 
-    void Update ()
+    void Update()
     {
         ////////Debug
         for (int i = 0; i < rayNum; i++)
         {
-            Debug.DrawRay(transform.position, Quaternion.AngleAxis(-fov/2f + fov/(rayNum-1) * i, Vector3.up) * transform.forward * viewDistance, Color.red, 0.1f);
+            Debug.DrawRay(transform.position, Quaternion.AngleAxis(-fov / 2f + fov / (rayNum - 1) * i, Vector3.up) * transform.forward * viewDistance, Color.red, 0.1f);
         }
         Debug.DrawLine(transform.position, player.position);
         ////////
 
-        //"hoover"
-        float y = 0.25f * Mathf.Sin(Time.realtimeSinceStartup * 5);
-        transform.Translate(new Vector3(0, y, 0));
-
+        //"hoover" ---> ne dela...
+        //float y = 0.2f *  Mathf.Sin(Time.realtimeSinceStartup * 5);
+        //transform.Translate(new Vector3(0, y, 0));
 
         if (sawPlayer)
         {
-            if (Vector3.Distance(transform.position, player.position) < 10f)
+            if (Vector3.Distance(transform.position, player.position) < 8f)
             {
                 transform.LookAt(player.position);
-                nav.Stop();
             }
             else
             {
-                nav.Resume();
                 nav.SetDestination(player.position);
             }
             alertOthers();
@@ -88,7 +85,8 @@ public class EnemyMovement : MonoBehaviour
 
                 if (timer >= timeToWait)
                 {
-                    currentPP = (currentPP + 1) % numOfPps;
+                    //currentPP = (currentPP + 1) % numOfPps;
+                    currentPP = Random.Range(0, numOfPps);
                     nav.SetDestination(pps[currentPP].position);
                     timer = 0;
                 }
@@ -135,10 +133,9 @@ public class EnemyMovement : MonoBehaviour
 
     public void alert()
     {
+        nav.stoppingDistance = 8f;
         sawPlayer = true;
-        nav.speed = 8;
-        GameObject head = transform.Find("Head").gameObject;
-        head.GetComponent<Renderer>().material.color = Color.green;
+        nav.speed = 5;
     }
 
     public void SetNavDestination(Vector3 dest)

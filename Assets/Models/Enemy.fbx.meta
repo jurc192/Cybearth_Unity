@@ -1,66 +1,15 @@
 fileFormatVersion: 2
-guid: 6fac71773a814334cb555578f1836b43
-timeCreated: 1452433713
+guid: 2a95eada8c5cc7642924f9ae70d7ae91
+timeCreated: 1452446135
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: CameraTurret
-    100002: cannonUp
-    100004: cannonUp.001
-    100006: //RootNode
-    100008: enemyBase
-    100010: exhaust
-    100012: flapsBelt
-    100014: Lens
-    100016: Sphere
-    100018: turretR
-    400000: CameraTurret
-    400002: cannonUp
-    400004: cannonUp.001
-    400006: //RootNode
-    400008: enemyBase
-    400010: exhaust
-    400012: flapsBelt
-    400014: Lens
-    400016: Sphere
-    400018: turretR
-    2300000: CameraTurret
-    2300002: cannonUp
-    2300004: cannonUp.001
-    2300006: enemyBase
-    2300008: exhaust
-    2300010: flapsBelt
-    2300012: Lens
-    2300014: Sphere
-    2300016: turretR
-    3300000: CameraTurret
-    3300002: cannonUp
-    3300004: cannonUp.001
-    3300006: enemyBase
-    3300008: exhaust
-    3300010: flapsBelt
-    3300012: Lens
-    3300014: Sphere
-    3300016: turretR
-    4300000: cannonUp.001
-    4300002: cannonUp
-    4300004: turretR
-    4300006: exhaust
-    4300008: CameraTurret
-    4300010: Sphere
-    4300012: Lens
-    4300014: flapsBelt
-    4300016: enemyBase
-    6400000: CameraTurret
-    6400002: cannonUp
-    6400004: cannonUp.001
-    6400006: enemyBase
-    6400008: exhaust
-    6400010: flapsBelt
-    6400012: Lens
-    6400014: Sphere
-    6400016: turretR
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Enemy
   materials:
     importMaterials: 1
     materialName: 0
@@ -87,7 +36,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 100
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
