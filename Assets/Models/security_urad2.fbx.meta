@@ -1,15 +1,47 @@
 fileFormatVersion: 2
-guid: 7e74ee2f0005fc2438b6da4d37af2123
-timeCreated: 1452085436
+guid: 41bec30cd3106ec48b8839753f52e9c7
+timeCreated: 1452543221
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Prehod
+    100000: door
+    100002: Plane
+    100004: Plane.001
+    100006: Roleta
+    100008: Roleta.001
+    100010: Security_base
+    100012: Security_base.001
+    100014: //RootNode
+    400000: door
+    400002: Plane
+    400004: Plane.001
+    400006: Roleta
+    400008: Roleta.001
+    400010: Security_base
+    400012: Security_base.001
+    400014: //RootNode
+    2300000: door
+    2300002: Plane
+    2300004: Plane.001
+    2300006: Roleta
+    2300008: Roleta.001
+    2300010: Security_base
+    2300012: Security_base.001
+    3300000: door
+    3300002: Plane
+    3300004: Plane.001
+    3300006: Roleta
+    3300008: Roleta.001
+    3300010: Security_base
+    3300012: Security_base.001
+    4300000: Plane.001
+    4300002: Plane
+    4300004: Roleta.001
+    4300006: Roleta
+    4300008: door
+    4300010: Security_base.001
+    4300012: Security_base
   materials:
     importMaterials: 1
     materialName: 0
@@ -34,7 +66,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -52,7 +84,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 4
+    tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

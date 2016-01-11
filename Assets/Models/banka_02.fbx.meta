@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d1479ca8fd7422440b5c7bb10f56cbab
-timeCreated: 1452082460
+guid: bb1bb402352a0bf408c1bc484d2e8144
+timeCreated: 1452543143
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: base
+    4300000: BEJS
   materials:
     importMaterials: 1
     materialName: 0
@@ -52,7 +52,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 4
+    tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
