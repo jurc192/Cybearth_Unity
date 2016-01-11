@@ -92,4 +92,9 @@ public class ElevatorHandler : MonoBehaviour {
             infoText.SetActive(false);
         }
     }
+
+    public void CallElevator()
+    {
+        direction = 1;
+    }
 }

@@ -4,7 +4,6 @@ using System.Collections;
 public class PauseController : MonoBehaviour {
 
     [SerializeField] GameObject pauseMenu;
-    [SerializeField] GameObject fpc;
 
     bool pause = false;
 
@@ -16,14 +15,12 @@ public class PauseController : MonoBehaviour {
             if (pause)
             {
                 Time.timeScale = 0;
-                fpc.SetActive(false);
                 Cursor.visible = true;
                 pauseMenu.SetActive(true);
             }
             else
             {
                 Time.timeScale = 1;
-                fpc.SetActive(true);
                 Cursor.visible = false;
                 pauseMenu.SetActive(false);
             }

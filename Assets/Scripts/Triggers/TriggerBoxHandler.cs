@@ -5,13 +5,7 @@ using UnityEngine.UI;
 public class TriggerBoxHandler : MonoBehaviour {
 
     private static int triggerBoxCount = 0;
-    public static int TriggerBoxCount
-    {
-        get
-        {
-            return triggerBoxCount;
-        }
-    }
+    public static int TriggerBoxCount {get { return triggerBoxCount; } }
 
     private bool isTriggerOn = false;
 
@@ -81,8 +75,8 @@ public class TriggerBoxHandler : MonoBehaviour {
 
 		cts.HackJumbo();
 		
-        gameController.FinishedTask();
+        gameController.FinishedHacking();
 
-        this.enabled = false;
+        this.gameObject.SetActive(false);
     }
 }

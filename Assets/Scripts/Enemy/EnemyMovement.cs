@@ -140,6 +140,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void SetNavDestination(Vector3 dest)
     {
-        nav.SetDestination(dest);
+        if(nav.isOnNavMesh)
+            nav.SetDestination(dest);
     }
 }

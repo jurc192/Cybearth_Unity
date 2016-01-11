@@ -4,27 +4,42 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-    [SerializeField]
-    private GameObject text;
-    private int numOfTasks;
-    private int finishedTasks;
+    [SerializeField] private GameObject fpc;
+    [SerializeField] private GameObject text;
+    [SerializeField] private GameObject findForkBombText;
+    [SerializeField] private GameObject plantForkBombText;
+    [SerializeField] private GameObject forkBomb;
+    [SerializeField] private GameObject door;
+
+
+    [SerializeField] private Text hackText;
+
+    private int allHacks;
+    private int alreadyHacked;
 
 	// Use this for initialization
 	void Start () {
-        finishedTasks = 0;
-        numOfTasks = TriggerBoxHandler.TriggerBoxCount;
+        alreadyHacked = 0;
+        allHacks = TriggerBoxHandler.TriggerBoxCount;
     }
 	
-    public void FinishedTask()
+    public void FinishedHacking()
     {
-        finishedTasks++;
-        
-        if(finishedTasks >= numOfTasks)
-        {
-            text.GetComponent<Text>().text = "Game Over";
-            text.SetActive(true);
+        alreadyHacked++;
+        hackText.text = "- Hack all terminals [" + alreadyHacked.ToString() + "/3]";
 
-            Time.timeScale = 0;
+        if (alreadyHacked >= allHacks)
+        {
+            hackText.color = Color.green;
+            findForkBombText.SetActive(true);
+            forkBomb.SetActive(true);
         }
+    }
+
+    public void PickedUpForkBomb()
+    {
+        findForkBombText.GetComponent<Text>().color = Color.green;
+        plantForkBombText.SetActive(true);
+        door.SetActive(true);
     }
 }

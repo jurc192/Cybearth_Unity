@@ -4,7 +4,6 @@ using System.Collections;
 public class ContinuePauseMenuHandler : MonoBehaviour {
     [SerializeField] GameObject bkg;
     [SerializeField] GameObject menu;
-    [SerializeField] GameObject fpc;
 
     public void OnMouseEnter()
     {
@@ -19,7 +18,6 @@ public class ContinuePauseMenuHandler : MonoBehaviour {
     public void OnMouseDown()
     {
         Time.timeScale = 1;
-        fpc.SetActive(true);
         Cursor.visible = false;
         menu.SetActive(false);
     }

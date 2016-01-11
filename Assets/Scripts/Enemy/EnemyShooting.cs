@@ -45,7 +45,8 @@ public class EnemyShooting : MonoBehaviour {
 
         if(timer >= timeBetweenShots && enemyMovement.SawPlayer)
         {
-            Shoot();
+            if(Vector3.Distance(transform.position, player.position) <= range)
+                Shoot();
         }
 
         if (timer >= effectsDisplayTime)
