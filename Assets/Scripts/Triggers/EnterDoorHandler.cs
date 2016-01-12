@@ -7,19 +7,18 @@ public class EnterDoorHandler : MonoBehaviour {
     [SerializeField] GameObject infoText;
     Text text;
 
+    bool active = false;
+
     void Start()
     {
         text = infoText.GetComponent<Text>();
     }
 
-    void OnTriggerStay(Collider other)
+    void Update()
     {
-        if (other.CompareTag("Player"))
+        if (active && Input.GetKeyDown(KeyCode.E))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                SceneManager.LoadScene(2);
-            }
+            SceneManager.LoadScene(2);
         }
     }
 
@@ -28,6 +27,7 @@ public class EnterDoorHandler : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             infoText.SetActive(true);
+            active = true;
             text.text = "PRESS < E >\nTO ENTER";
         }
     }
@@ -37,6 +37,7 @@ public class EnterDoorHandler : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             infoText.SetActive(false);
+            active = false;
         }
     }
 }

@@ -21,7 +21,8 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         alreadyHacked = 0;
-        allHacks = TriggerBoxHandler.TriggerBoxCount;
+        //allHacks = TriggerBoxHandler.TriggerBoxCount;
+        allHacks = 1;
     }
 	
     public void FinishedHacking()

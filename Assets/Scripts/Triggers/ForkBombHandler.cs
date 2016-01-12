@@ -8,21 +8,20 @@ public class ForkBombHandler : MonoBehaviour {
     [SerializeField] GameController gc;
     Text text;
 
+    bool active = false;
+
     void Start()
     {
         text = infoText.GetComponent<Text>();
     }
 
-    void OnTriggerStay(Collider other)
+    void Update()
     {
-        if (other.CompareTag("Player"))
+        if (active && Input.GetKeyDown(KeyCode.E))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                gc.PickedUpForkBomb();
-                infoText.SetActive(false);
-                gameObject.SetActive(false);
-            }
+            infoText.SetActive(false);
+            gameObject.SetActive(false);
+            gc.PickedUpForkBomb();
         }
     }
 
@@ -31,6 +30,7 @@ public class ForkBombHandler : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             infoText.SetActive(true);
+            active = true;
             text.text = "PRESS < E >\nTO PICK UP";
         }
     }
@@ -40,6 +40,7 @@ public class ForkBombHandler : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             infoText.SetActive(false);
+            active = false;
         }
     }
 }

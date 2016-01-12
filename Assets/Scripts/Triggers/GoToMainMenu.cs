@@ -9,6 +9,7 @@ public class GoToMainMenu : MonoBehaviour {
     void Start()
     {
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void OnMouseEnter()
@@ -23,6 +24,7 @@ public class GoToMainMenu : MonoBehaviour {
 
     public void OnMouseDown()
     {
+        //Application.Quit();
         SceneManager.LoadScene(0);
     }
 }

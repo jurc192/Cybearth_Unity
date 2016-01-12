@@ -8,19 +8,18 @@ public class SecondaryElevatorPanelHandler : MonoBehaviour {
     [SerializeField] GameObject infoText;
     Text text;
 
+    bool active = false;
+
     void Start()
     {
         text = infoText.GetComponent<Text>();
     }
 
-    void OnTriggerStay(Collider other)
+    void Update()
     {
-        if (other.CompareTag("Player"))
+        if (active && Input.GetKeyDown(KeyCode.E))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                eh.CallElevator();
-            }
+            eh.CallElevator();
         }
     }
 
@@ -29,6 +28,7 @@ public class SecondaryElevatorPanelHandler : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             infoText.SetActive(true);
+            active = true;
             text.text = "PRESS < E >\nTO CALL FOR ELEVATOR";
         }
     }
@@ -37,6 +37,7 @@ public class SecondaryElevatorPanelHandler : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+            active = false;
             infoText.SetActive(false);
         }
     }

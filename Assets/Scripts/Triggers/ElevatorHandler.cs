@@ -19,6 +19,7 @@ public class ElevatorHandler : MonoBehaviour {
     float timeToWait = 5f;
     float timer = 0f;
 
+    bool active = false;
 
 	void Start () {
         elevator = transform.parent;
@@ -28,6 +29,11 @@ public class ElevatorHandler : MonoBehaviour {
 
 	void Update()
     {
+        if (active && Input.GetKeyDown(KeyCode.E))
+        {
+            direction = (direction + 1) % 4;
+        }
+
         if (direction == 1 && elevator.transform.position.y >= 18.411)
         {
             Vector3 tmp = elevator.transform.position;
@@ -52,9 +58,7 @@ public class ElevatorHandler : MonoBehaviour {
                 isOnTop = false;
             }
         }
-    }
 
-	void FixedUpdate () {
         if (direction == 1)
         {
             elevator.transform.Translate(Vector3.up * speed * Time.deltaTime);
@@ -69,23 +73,13 @@ public class ElevatorHandler : MonoBehaviour {
         }
     }
 
-    void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                direction = (direction + 1) % 4; 
-            }
-        }
-    }
-
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             infoText.SetActive(true);
             text.text = "PRESS < E >\nTO TOGGLE";
+            active = true;
         }
     }
 
@@ -94,6 +88,7 @@ public class ElevatorHandler : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             infoText.SetActive(false);
+            active = false;
         }
     }
 

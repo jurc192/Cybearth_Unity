@@ -258,6 +258,14 @@ Prefab:
       propertyPath: bkg
       value: 
       objectReference: {fileID: 1841203479}
+    - target: {fileID: 11469256, guid: bc6f74417f5117b4aabff5b8b9332e46, type: 2}
+      propertyPath: m_Text
+      value: MAIN MENU
+      objectReference: {fileID: 0}
+    - target: {fileID: 147852, guid: bc6f74417f5117b4aabff5b8b9332e46, type: 2}
+      propertyPath: m_Name
+      value: Quit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc6f74417f5117b4aabff5b8b9332e46, type: 2}
   m_IsPrefabParent: 0

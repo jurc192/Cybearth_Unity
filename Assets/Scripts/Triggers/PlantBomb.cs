@@ -9,23 +9,22 @@ public class PlantBomb : MonoBehaviour {
 
     [SerializeField] GameObject endScreen;
 
+    bool active = false;
+
     void Start()
     {
         text = infoText.GetComponent<Text>();
     }
 
-    void OnTriggerStay(Collider other)
+    void Update()
     {
-        if (other.CompareTag("Player"))
+        if (active && Input.GetKeyDown(KeyCode.E))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                GetComponent<MeshRenderer>().enabled = true;
+            GetComponent<MeshRenderer>().enabled = true;
 
-                infoText.SetActive(false);
-                gameObject.GetComponent<BoxCollider>().enabled = false;
-                StartCoroutine(finishGame());
-            }
+            infoText.SetActive(false);
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            StartCoroutine(finishGame());
         }
     }
 
@@ -34,6 +33,7 @@ public class PlantBomb : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             infoText.SetActive(true);
+            active = true;
             text.text = "PRESS < E >\nTO PLANT THE BOMB";
         }
     }
@@ -42,6 +42,7 @@ public class PlantBomb : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
+            active = false;
             infoText.SetActive(false);
         }
     }
@@ -49,11 +50,6 @@ public class PlantBomb : MonoBehaviour {
     IEnumerator finishGame()
     {
         yield return new WaitForSeconds(3f);
-        //GameObject.FindGameObjectWithTag("Player").SetActive(false);
-        //endScreen.SetActive(true);
-        //Time.timeScale = 0;
-        //Cursor.visible = true;
-
         SceneManager.LoadScene(3);
     }
 }

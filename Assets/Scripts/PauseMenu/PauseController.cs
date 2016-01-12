@@ -10,7 +10,7 @@ public class PauseController : MonoBehaviour {
     void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            pause = !pause;
+            pause = !pauseMenu.active;
 
             if (pause)
             {
