@@ -28,8 +28,12 @@ public class ElevatorHandler : MonoBehaviour {
 
 	void Update()
     {
-        if (direction == 1 && elevator.transform.position.y >= 70)
+        if (direction == 1 && elevator.transform.position.y >= 18.411)
         {
+            Vector3 tmp = elevator.transform.position;
+            tmp.y = 18.411f;
+            elevator.transform.position = tmp;
+
             direction = 2;
             isOnTop = true;
             timer = 0f;

@@ -80,8 +80,8 @@ public class EnemyShooting : MonoBehaviour {
         Vector3 vecToPlayer = player.position - transform.position;
         float angleToPlayer = Vector3.Angle(transform.forward, vecToPlayer);
         // ce je znotraj kota strelnega polja
-        //if (Mathf.Abs(angleToPlayer) <= shootAngle / 2f)
-        //{
+        if (Mathf.Abs(angleToPlayer) <= shootAngle / 2f)
+        {
             shootRay.origin = transform.position;
             Vector3 playerDirection = player.position - playersPreviousPosition;
             playerDirection.z = 0;
@@ -101,7 +101,7 @@ public class EnemyShooting : MonoBehaviour {
             {
                 gunLine.SetPosition(1, shootRay.origin + shootRay.direction * range);
             }
-        //}
+        }
     }
 
 }
