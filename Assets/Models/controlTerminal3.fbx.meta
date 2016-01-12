@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: 7975e67f515eca7429e0c7847bbb3e15
+timeCreated: 1452590173
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: cevi
+    100002: cevi2
+    100004: //RootNode
+    100006: GlavnaMasina.001
+    100008: Gumbi
+    100010: mainScreen
+    100012: masina1
+    100014: masina2
+    100016: masina2.001
+    100018: miniScreen1
+    100020: miniScreen2
+    100022: miniScreen3
+    100024: miniScreen4
+    100026: nogica
+    100028: OmarcaBase
+    100030: Policke
+    100032: PowerSupply
+    100034: PowerSupply.001
+    100036: velikGumb
+    100038: vrataL
+    100040: vrataR
+    400000: cevi
+    400002: cevi2
+    400004: //RootNode
+    400006: GlavnaMasina.001
+    400008: Gumbi
+    400010: mainScreen
+    400012: masina1
+    400014: masina2
+    400016: masina2.001
+    400018: miniScreen1
+    400020: miniScreen2
+    400022: miniScreen3
+    400024: miniScreen4
+    400026: nogica
+    400028: OmarcaBase
+    400030: Policke
+    400032: PowerSupply
+    400034: PowerSupply.001
+    400036: velikGumb
+    400038: vrataL
+    400040: vrataR
+    2300000: cevi
+    2300002: cevi2
+    2300004: GlavnaMasina.001
+    2300006: Gumbi
+    2300008: mainScreen
+    2300010: masina1
+    2300012: masina2
+    2300014: masina2.001
+    2300016: miniScreen1
+    2300018: miniScreen2
+    2300020: miniScreen3
+    2300022: miniScreen4
+    2300024: nogica
+    2300026: OmarcaBase
+    2300028: Policke
+    2300030: PowerSupply
+    2300032: PowerSupply.001
+    2300034: velikGumb
+    2300036: vrataL
+    2300038: vrataR
+    3300000: cevi
+    3300002: cevi2
+    3300004: GlavnaMasina.001
+    3300006: Gumbi
+    3300008: mainScreen
+    3300010: masina1
+    3300012: masina2
+    3300014: masina2.001
+    3300016: miniScreen1
+    3300018: miniScreen2
+    3300020: miniScreen3
+    3300022: miniScreen4
+    3300024: nogica
+    3300026: OmarcaBase
+    3300028: Policke
+    3300030: PowerSupply
+    3300032: PowerSupply.001
+    3300034: velikGumb
+    3300036: vrataL
+    3300038: vrataR
+    4300000: vrataR
+    4300002: vrataL
+    4300004: PowerSupply.001
+    4300006: cevi
+    4300008: cevi2
+    4300010: nogica
+    4300012: GlavnaMasina.001
+    4300014: velikGumb
+    4300016: miniScreen1
+    4300018: miniScreen3
+    4300020: miniScreen4
+    4300022: miniScreen2
+    4300024: Gumbi
+    4300026: PowerSupply
+    4300028: mainScreen
+    4300030: masina2.001
+    4300032: masina2
+    4300034: masina1
+    4300036: Policke
+    4300038: OmarcaBase
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

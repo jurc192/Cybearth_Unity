@@ -1,0 +1,123 @@
+fileFormatVersion: 2
+guid: f0cba10c6ab74104c82dc3aaf55f9060
+timeCreated: 1452554090
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: backCap
+    100002: BezierCurve
+    100004: BezierCurve.001
+    100006: GasHolder
+    100008: GasHolder.001
+    100010: GasTank
+    100012: GasTankPlug
+    100014: //RootNode
+    100016: Light
+    100018: Screen
+    100020: ScreenBase
+    400000: backCap
+    400002: BezierCurve
+    400004: BezierCurve.001
+    400006: GasHolder
+    400008: GasHolder.001
+    400010: GasTank
+    400012: GasTankPlug
+    400014: //RootNode
+    400016: Light
+    400018: Screen
+    400020: ScreenBase
+    2300000: backCap
+    2300002: BezierCurve
+    2300004: BezierCurve.001
+    2300006: GasHolder
+    2300008: GasHolder.001
+    2300010: GasTank
+    2300012: GasTankPlug
+    2300014: Light
+    2300016: Screen
+    2300018: ScreenBase
+    3300000: backCap
+    3300002: BezierCurve
+    3300004: BezierCurve.001
+    3300006: GasHolder
+    3300008: GasHolder.001
+    3300010: GasTank
+    3300012: GasTankPlug
+    3300014: Light
+    3300016: Screen
+    3300018: ScreenBase
+    4300000: Light
+    4300002: BezierCurve.001
+    4300004: GasHolder.001
+    4300006: BezierCurve
+    4300008: backCap
+    4300010: GasTankPlug
+    4300012: GasTank
+    4300014: GasHolder
+    4300016: Screen
+    4300018: ScreenBase
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
