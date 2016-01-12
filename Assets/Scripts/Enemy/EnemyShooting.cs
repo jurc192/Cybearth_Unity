@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnemyShooting : MonoBehaviour {
-    EnemyMovement enemyMovement;
+    [SerializeField] EnemyMovement enemyMovement;
     Transform player;
     PlayerHealth playerHealth;
 
@@ -28,7 +28,6 @@ public class EnemyShooting : MonoBehaviour {
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         playerHealth = player.gameObject.GetComponent<PlayerHealth>();
-        enemyMovement = transform.parent.gameObject.GetComponent<EnemyMovement>();
 
         shootableMask = LayerMask.GetMask("Environment") | LayerMask.GetMask("Player");
 
@@ -45,7 +44,8 @@ public class EnemyShooting : MonoBehaviour {
 
         if(timer >= timeBetweenShots && enemyMovement.SawPlayer)
         {
-            Shoot();
+            if(Vector3.Distance(transform.position, player.position) <= range)
+                Shoot();
         }
 
         if (timer >= effectsDisplayTime)
@@ -80,8 +80,8 @@ public class EnemyShooting : MonoBehaviour {
         Vector3 vecToPlayer = player.position - transform.position;
         float angleToPlayer = Vector3.Angle(transform.forward, vecToPlayer);
         // ce je znotraj kota strelnega polja
-        if (Mathf.Abs(angleToPlayer) <= shootAngle / 2f)
-        {
+        //if (Mathf.Abs(angleToPlayer) <= shootAngle / 2f)
+        //{
             shootRay.origin = transform.position;
             Vector3 playerDirection = player.position - playersPreviousPosition;
             playerDirection.z = 0;
@@ -101,7 +101,7 @@ public class EnemyShooting : MonoBehaviour {
             {
                 gunLine.SetPosition(1, shootRay.origin + shootRay.direction * range);
             }
-        }
+        //}
     }
 
 }
