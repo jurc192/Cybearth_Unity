@@ -49,9 +49,11 @@ public class PlantBomb : MonoBehaviour {
     IEnumerator finishGame()
     {
         yield return new WaitForSeconds(3f);
-        GameObject.FindGameObjectWithTag("Player").SetActive(false);
-        endScreen.SetActive(true);
-        Time.timeScale = 0;
-        Cursor.visible = true;
+        //GameObject.FindGameObjectWithTag("Player").SetActive(false);
+        //endScreen.SetActive(true);
+        //Time.timeScale = 0;
+        //Cursor.visible = true;
+
+        SceneManager.LoadScene(3);
     }
 }
