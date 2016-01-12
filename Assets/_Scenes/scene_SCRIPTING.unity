@@ -658,7 +658,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 0b2ca50a867d6a343a4d57c6b50d603d, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 0b2ca50a867d6a343a4d57c6b50d603d, type: 3}
       propertyPath: m_Name
@@ -1367,7 +1367,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1001 &598618611
 Prefab:
   m_ObjectHideFlags: 0
@@ -2972,6 +2972,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 481780, guid: 5f792ff34a0a5da46a9686134f0b5062, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 63
+      objectReference: {fileID: 0}
+    - target: {fileID: 487478, guid: 5f792ff34a0a5da46a9686134f0b5062, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -83
+      objectReference: {fileID: 0}
+    - target: {fileID: 441324, guid: 5f792ff34a0a5da46a9686134f0b5062, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 83.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f792ff34a0a5da46a9686134f0b5062, type: 2}
   m_IsPrefabParent: 0
@@ -3405,7 +3417,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400064, guid: 7900c3e8e2dec8741aac89254941bfff, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 400168, guid: 7900c3e8e2dec8741aac89254941bfff, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5811,7 +5823,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1 &1144850017 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100316, guid: 812af17f0ec032845a2450550c24dc6a, type: 3}
@@ -6977,7 +6989,7 @@ Transform:
   - {fileID: 464612792}
   - {fileID: 850184758}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &1550434741 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100014, guid: eff32bc09dd26d64d9e17484be0d53fe, type: 3}
@@ -7140,10 +7152,11 @@ Transform:
   - {fileID: 2084302783}
   - {fileID: 884438722}
   - {fileID: 2080257849}
-  - {fileID: 287772551}
   - {fileID: 852138492}
+  - {fileID: 287772551}
+  - {fileID: 1934185978}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1001 &1591621025
 Prefab:
   m_ObjectHideFlags: 0
@@ -7185,7 +7198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11439080, guid: b3ffc0dda69dffd45aba59af1125125d, type: 2}
       propertyPath: m_Text
-      value: '- Hack all terminals [0/1]'
+      value: '- Hack all terminals [0/5]'
       objectReference: {fileID: 0}
     - target: {fileID: 191596, guid: b3ffc0dda69dffd45aba59af1125125d, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -8047,6 +8060,10 @@ Prefab:
       propertyPath: deadScreen
       value: 
       objectReference: {fileID: 1453747234}
+    - target: {fileID: 11420576, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: gunShot
+      value: 
+      objectReference: {fileID: 8300000, guid: adb198564adb1cf4fa86e106bc88fbc5, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_IsPrefabParent: 0
@@ -8513,8 +8530,8 @@ Transform:
   - {fileID: 1602609881}
   - {fileID: 321361376}
   - {fileID: 1851498548}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1586620410}
+  m_RootOrder: 16
 --- !u!114 &1938205217 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11466756, guid: b3ffc0dda69dffd45aba59af1125125d,

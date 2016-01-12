@@ -22,13 +22,13 @@ public class GameController : MonoBehaviour {
 	void Start () {
         alreadyHacked = 0;
         //allHacks = TriggerBoxHandler.TriggerBoxCount;
-        allHacks = 1;
+        allHacks = 5;
     }
 	
     public void FinishedHacking()
     {
         alreadyHacked++;
-        hackText.text = "- Hack all terminals [" + alreadyHacked.ToString() + "/1]";
+        hackText.text = "- Hack all terminals [" + alreadyHacked.ToString() + "/5]";
 
         if (alreadyHacked >= allHacks)
         {
