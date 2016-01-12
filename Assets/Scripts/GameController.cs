@@ -7,8 +7,10 @@ public class GameController : MonoBehaviour {
     [SerializeField] private GameObject fpc;
     [SerializeField] private GameObject findForkBombText;
     [SerializeField] private GameObject plantForkBombText;
-    //[SerializeField] private GameObject forkBomb;
-    //[SerializeField] private GameObject door;
+    [SerializeField]
+    private GameObject forkBomb;
+    [SerializeField]
+    private GameObject door;
 
 
     [SerializeField] private Text hackText;
@@ -31,7 +33,7 @@ public class GameController : MonoBehaviour {
         {
             hackText.color = Color.green;
             findForkBombText.SetActive(true);
-            //forkBomb.SetActive(true);
+            forkBomb.SetActive(true);
         }
     }
 
@@ -39,6 +41,6 @@ public class GameController : MonoBehaviour {
     {
         findForkBombText.GetComponent<Text>().color = Color.green;
         plantForkBombText.SetActive(true);
-        //door.SetActive(true);
+        door.SetActive(true);
     }
 }
