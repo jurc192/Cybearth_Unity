@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
     [SerializeField] private float maxHealth = 100;
     [SerializeField] private Text healthInfo;
     [SerializeField] private GameObject damageFlash;
+    [SerializeField]
+    private GameObject deadScreen;
+    [SerializeField] private GameObject infoText;
 
     private float currentHealth;
     
@@ -49,6 +53,16 @@ public class PlayerHealth : MonoBehaviour {
     }
     private void Death()
     {
-        Time.timeScale = 0;
+        StartCoroutine(Restart());
+        Time.timeScale = 0.5f;
+        infoText.SetActive(true);
+        infoText.GetComponent<Text>().text = "GAME OVER";
+        deadScreen.SetActive(true);
+    }
+
+    IEnumerator Restart()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(0);
     }
 }
