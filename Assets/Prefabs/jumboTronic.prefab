@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 476514}
   - 114: {fileID: 11415172}
   m_Layer: 0
-  m_Name: jumboTronic6
+  m_Name: jumboTronic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

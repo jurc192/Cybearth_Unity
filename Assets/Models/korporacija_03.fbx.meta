@@ -1,0 +1,509 @@
+fileFormatVersion: 2
+guid: 7900c3e8e2dec8741aac89254941bfff
+timeCreated: 1452634788
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: CEV 01
+    100002: CEV 01.1
+    100004: CEV 01.2
+    100006: CEV 01.3
+    100008: CEV 01.4
+    100010: CEV 01.5
+    100012: CEV 01.6
+    100014: CEV 01.7
+    100016: CEV 01.8
+    100018: Cube
+    100020: Cube.009
+    100022: Cube.017
+    100024: Cube.018
+    100026: Cube.019
+    100028: Cube.020
+    100030: Cube.021
+    100032: Cube.022
+    100034: Cube.023
+    100036: Cube.024
+    100038: Cube.025
+    100040: Cube.026
+    100042: Cube.027
+    100044: Cube.028
+    100046: Cube.029
+    100048: Cube.030
+    100050: Cube.031
+    100052: Cube.032
+    100054: Cube.033
+    100056: Cube.034
+    100058: Cube.035
+    100060: Cube.036
+    100062: Cube.2
+    100064: //RootNode
+    100066: OKNO_03
+    100068: OKNO_03.1
+    100070: OKNO_03.10
+    100072: OKNO_03.11
+    100074: OKNO_03.12
+    100076: OKNO_03.13
+    100078: OKNO_03.14
+    100080: OKNO_03.15
+    100082: OKNO_03.16
+    100084: OKNO_03.17
+    100086: OKNO_03.18
+    100088: OKNO_03.19
+    100090: OKNO_03.2
+    100092: OKNO_03.20
+    100094: OKNO_03.3
+    100096: OKNO_03.4
+    100098: OKNO_03.5
+    100100: OKNO_03.6
+    100102: OKNO_03.7
+    100104: OKNO_03.8
+    100106: OKNO_03.9
+    100108: OKNO_04
+    100110: OKNO_04.01
+    100112: OKNO_04.02
+    100114: OKNO_04.03
+    100116: OKNO_04.1
+    100118: OKNO_04.10
+    100120: OKNO_04.11
+    100122: OKNO_04.12
+    100124: OKNO_04.13
+    100126: OKNO_04.14
+    100128: OKNO_04.15
+    100130: OKNO_04.16
+    100132: OKNO_04.17
+    100134: OKNO_04.18
+    100136: OKNO_04.19
+    100138: OKNO_04.2
+    100140: OKNO_04.20
+    100142: OKNO_04.21
+    100144: OKNO_04.22
+    100146: OKNO_04.23
+    100148: OKNO_04.24
+    100150: OKNO_04.25
+    100152: OKNO_04.26
+    100154: OKNO_04.3
+    100156: OKNO_04.4
+    100158: OKNO_04.5
+    100160: OKNO_04.6
+    100162: OKNO_04.7
+    100164: OKNO_04.8
+    100166: OKNO_04.9
+    100168: Plane
+    100170: Plane.2
+    100172: Plane.2.2
+    100174: STAVBA
+    400000: CEV 01
+    400002: CEV 01.1
+    400004: CEV 01.2
+    400006: CEV 01.3
+    400008: CEV 01.4
+    400010: CEV 01.5
+    400012: CEV 01.6
+    400014: CEV 01.7
+    400016: CEV 01.8
+    400018: Cube
+    400020: Cube.009
+    400022: Cube.017
+    400024: Cube.018
+    400026: Cube.019
+    400028: Cube.020
+    400030: Cube.021
+    400032: Cube.022
+    400034: Cube.023
+    400036: Cube.024
+    400038: Cube.025
+    400040: Cube.026
+    400042: Cube.027
+    400044: Cube.028
+    400046: Cube.029
+    400048: Cube.030
+    400050: Cube.031
+    400052: Cube.032
+    400054: Cube.033
+    400056: Cube.034
+    400058: Cube.035
+    400060: Cube.036
+    400062: Cube.2
+    400064: //RootNode
+    400066: OKNO_03
+    400068: OKNO_03.1
+    400070: OKNO_03.10
+    400072: OKNO_03.11
+    400074: OKNO_03.12
+    400076: OKNO_03.13
+    400078: OKNO_03.14
+    400080: OKNO_03.15
+    400082: OKNO_03.16
+    400084: OKNO_03.17
+    400086: OKNO_03.18
+    400088: OKNO_03.19
+    400090: OKNO_03.2
+    400092: OKNO_03.20
+    400094: OKNO_03.3
+    400096: OKNO_03.4
+    400098: OKNO_03.5
+    400100: OKNO_03.6
+    400102: OKNO_03.7
+    400104: OKNO_03.8
+    400106: OKNO_03.9
+    400108: OKNO_04
+    400110: OKNO_04.01
+    400112: OKNO_04.02
+    400114: OKNO_04.03
+    400116: OKNO_04.1
+    400118: OKNO_04.10
+    400120: OKNO_04.11
+    400122: OKNO_04.12
+    400124: OKNO_04.13
+    400126: OKNO_04.14
+    400128: OKNO_04.15
+    400130: OKNO_04.16
+    400132: OKNO_04.17
+    400134: OKNO_04.18
+    400136: OKNO_04.19
+    400138: OKNO_04.2
+    400140: OKNO_04.20
+    400142: OKNO_04.21
+    400144: OKNO_04.22
+    400146: OKNO_04.23
+    400148: OKNO_04.24
+    400150: OKNO_04.25
+    400152: OKNO_04.26
+    400154: OKNO_04.3
+    400156: OKNO_04.4
+    400158: OKNO_04.5
+    400160: OKNO_04.6
+    400162: OKNO_04.7
+    400164: OKNO_04.8
+    400166: OKNO_04.9
+    400168: Plane
+    400170: Plane.2
+    400172: Plane.2.2
+    400174: STAVBA
+    2300000: CEV 01
+    2300002: CEV 01.1
+    2300004: CEV 01.2
+    2300006: CEV 01.3
+    2300008: CEV 01.4
+    2300010: CEV 01.5
+    2300012: CEV 01.6
+    2300014: CEV 01.7
+    2300016: CEV 01.8
+    2300018: Cube
+    2300020: Cube.009
+    2300022: Cube.017
+    2300024: Cube.018
+    2300026: Cube.019
+    2300028: Cube.020
+    2300030: Cube.021
+    2300032: Cube.022
+    2300034: Cube.023
+    2300036: Cube.024
+    2300038: Cube.025
+    2300040: Cube.026
+    2300042: Cube.027
+    2300044: Cube.028
+    2300046: Cube.029
+    2300048: Cube.030
+    2300050: Cube.031
+    2300052: Cube.032
+    2300054: Cube.033
+    2300056: Cube.034
+    2300058: Cube.035
+    2300060: Cube.036
+    2300062: Cube.2
+    2300064: OKNO_03
+    2300066: OKNO_03.1
+    2300068: OKNO_03.10
+    2300070: OKNO_03.11
+    2300072: OKNO_03.12
+    2300074: OKNO_03.13
+    2300076: OKNO_03.14
+    2300078: OKNO_03.15
+    2300080: OKNO_03.16
+    2300082: OKNO_03.17
+    2300084: OKNO_03.18
+    2300086: OKNO_03.19
+    2300088: OKNO_03.2
+    2300090: OKNO_03.20
+    2300092: OKNO_03.3
+    2300094: OKNO_03.4
+    2300096: OKNO_03.5
+    2300098: OKNO_03.6
+    2300100: OKNO_03.7
+    2300102: OKNO_03.8
+    2300104: OKNO_03.9
+    2300106: OKNO_04
+    2300108: OKNO_04.01
+    2300110: OKNO_04.02
+    2300112: OKNO_04.03
+    2300114: OKNO_04.1
+    2300116: OKNO_04.10
+    2300118: OKNO_04.11
+    2300120: OKNO_04.12
+    2300122: OKNO_04.13
+    2300124: OKNO_04.14
+    2300126: OKNO_04.15
+    2300128: OKNO_04.16
+    2300130: OKNO_04.17
+    2300132: OKNO_04.18
+    2300134: OKNO_04.19
+    2300136: OKNO_04.2
+    2300138: OKNO_04.20
+    2300140: OKNO_04.21
+    2300142: OKNO_04.22
+    2300144: OKNO_04.23
+    2300146: OKNO_04.24
+    2300148: OKNO_04.25
+    2300150: OKNO_04.26
+    2300152: OKNO_04.3
+    2300154: OKNO_04.4
+    2300156: OKNO_04.5
+    2300158: OKNO_04.6
+    2300160: OKNO_04.7
+    2300162: OKNO_04.8
+    2300164: OKNO_04.9
+    2300166: Plane
+    2300168: Plane.2
+    2300170: Plane.2.2
+    2300172: STAVBA
+    3300000: CEV 01
+    3300002: CEV 01.1
+    3300004: CEV 01.2
+    3300006: CEV 01.3
+    3300008: CEV 01.4
+    3300010: CEV 01.5
+    3300012: CEV 01.6
+    3300014: CEV 01.7
+    3300016: CEV 01.8
+    3300018: Cube
+    3300020: Cube.009
+    3300022: Cube.017
+    3300024: Cube.018
+    3300026: Cube.019
+    3300028: Cube.020
+    3300030: Cube.021
+    3300032: Cube.022
+    3300034: Cube.023
+    3300036: Cube.024
+    3300038: Cube.025
+    3300040: Cube.026
+    3300042: Cube.027
+    3300044: Cube.028
+    3300046: Cube.029
+    3300048: Cube.030
+    3300050: Cube.031
+    3300052: Cube.032
+    3300054: Cube.033
+    3300056: Cube.034
+    3300058: Cube.035
+    3300060: Cube.036
+    3300062: Cube.2
+    3300064: OKNO_03
+    3300066: OKNO_03.1
+    3300068: OKNO_03.10
+    3300070: OKNO_03.11
+    3300072: OKNO_03.12
+    3300074: OKNO_03.13
+    3300076: OKNO_03.14
+    3300078: OKNO_03.15
+    3300080: OKNO_03.16
+    3300082: OKNO_03.17
+    3300084: OKNO_03.18
+    3300086: OKNO_03.19
+    3300088: OKNO_03.2
+    3300090: OKNO_03.20
+    3300092: OKNO_03.3
+    3300094: OKNO_03.4
+    3300096: OKNO_03.5
+    3300098: OKNO_03.6
+    3300100: OKNO_03.7
+    3300102: OKNO_03.8
+    3300104: OKNO_03.9
+    3300106: OKNO_04
+    3300108: OKNO_04.01
+    3300110: OKNO_04.02
+    3300112: OKNO_04.03
+    3300114: OKNO_04.1
+    3300116: OKNO_04.10
+    3300118: OKNO_04.11
+    3300120: OKNO_04.12
+    3300122: OKNO_04.13
+    3300124: OKNO_04.14
+    3300126: OKNO_04.15
+    3300128: OKNO_04.16
+    3300130: OKNO_04.17
+    3300132: OKNO_04.18
+    3300134: OKNO_04.19
+    3300136: OKNO_04.2
+    3300138: OKNO_04.20
+    3300140: OKNO_04.21
+    3300142: OKNO_04.22
+    3300144: OKNO_04.23
+    3300146: OKNO_04.24
+    3300148: OKNO_04.25
+    3300150: OKNO_04.26
+    3300152: OKNO_04.3
+    3300154: OKNO_04.4
+    3300156: OKNO_04.5
+    3300158: OKNO_04.6
+    3300160: OKNO_04.7
+    3300162: OKNO_04.8
+    3300164: OKNO_04.9
+    3300166: Plane
+    3300168: Plane.2
+    3300170: Plane.2.2
+    3300172: STAVBA
+    4300000: Plane
+    4300002: CEV 01.8
+    4300004: CEV 01.7
+    4300006: Plane.2
+    4300008: Cube.2
+    4300010: Plane.2.2
+    4300012: Cube
+    4300014: CEV 01.6
+    4300016: CEV 01.5
+    4300018: CEV 01.4
+    4300020: CEV 01.3
+    4300022: CEV 01.2
+    4300024: CEV 01.1
+    4300026: CEV 01
+    4300028: STAVBA
+    4300030: OKNO_04.26
+    4300032: OKNO_04.25
+    4300034: OKNO_04.24
+    4300036: OKNO_04.23
+    4300038: OKNO_04.22
+    4300040: OKNO_04.21
+    4300042: OKNO_04.20
+    4300044: OKNO_04.19
+    4300046: OKNO_04.18
+    4300048: OKNO_04.17
+    4300050: OKNO_04.16
+    4300052: OKNO_04.15
+    4300054: OKNO_04.14
+    4300056: OKNO_04.13
+    4300058: OKNO_04.12
+    4300060: OKNO_04.11
+    4300062: OKNO_04.10
+    4300064: OKNO_04.9
+    4300066: OKNO_04.8
+    4300068: OKNO_04.7
+    4300070: OKNO_04.6
+    4300072: OKNO_04.5
+    4300074: OKNO_04.4
+    4300076: OKNO_04.3
+    4300078: OKNO_04.2
+    4300080: OKNO_04.1
+    4300082: OKNO_04
+    4300084: OKNO_04.03
+    4300086: OKNO_04.02
+    4300088: OKNO_04.01
+    4300090: OKNO_03.20
+    4300092: OKNO_03.19
+    4300094: OKNO_03.18
+    4300096: OKNO_03.17
+    4300098: OKNO_03.16
+    4300100: OKNO_03.15
+    4300102: OKNO_03.14
+    4300104: OKNO_03.13
+    4300106: OKNO_03.12
+    4300108: OKNO_03.11
+    4300110: OKNO_03.10
+    4300112: OKNO_03.9
+    4300114: OKNO_03.8
+    4300116: OKNO_03.7
+    4300118: OKNO_03.6
+    4300120: OKNO_03.5
+    4300122: OKNO_03.4
+    4300124: OKNO_03.3
+    4300126: OKNO_03.2
+    4300128: OKNO_03.1
+    4300130: OKNO_03
+    4300132: Cube.036
+    4300134: Cube.035
+    4300136: Cube.034
+    4300138: Cube.033
+    4300140: Cube.032
+    4300142: Cube.031
+    4300144: Cube.030
+    4300146: Cube.029
+    4300148: Cube.028
+    4300150: Cube.027
+    4300152: Cube.026
+    4300154: Cube.025
+    4300156: Cube.024
+    4300158: Cube.023
+    4300160: Cube.022
+    4300162: Cube.021
+    4300164: Cube.020
+    4300166: Cube.019
+    4300168: Cube.018
+    4300170: Cube.017
+    4300172: Cube.009
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
